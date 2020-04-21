@@ -34,7 +34,7 @@ image = cv2.imread(os.path.join(path,'G.png'),0)
 bg = cv2.imread(bg_path)
 x,y = image.shape
 bg = cv2.resize(bg,(y,x))
-ret,thresh = cv2.threshold(image,75,255,0)
+ret,thresh = cv2.threshold(image,128,255,0)
 contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
 
