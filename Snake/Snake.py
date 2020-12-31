@@ -356,20 +356,20 @@ def main():
 		
 		print(a)
 			
+		for event in pygame.event.get():
+			if event.type == pygame.KEYDOWN:
 
-		if event.type == pygame.KEYDOWN:
-			
-			if  event.key == pygame.K_DOWN and movement != 1:
-				movement = 0
-				
-			if  event.key == pygame.K_UP and movement != 0:
-				movement = 1
-				
-			if  event.key == pygame.K_RIGHT and movement != 3:
-				movement = 2
-				
-			if  event.key == pygame.K_LEFT and movement != 2:
-				movement = 3
+				if  event.key == pygame.K_DOWN and movement != 1:
+					movement = 0
+
+				if  event.key == pygame.K_UP and movement != 0:
+					movement = 1
+
+				if  event.key == pygame.K_RIGHT and movement != 3:
+					movement = 2
+
+				if  event.key == pygame.K_LEFT and movement != 2:
+					movement = 3
 
 		pygame.display.update()
 
