@@ -104,6 +104,7 @@ def main(genomes,config):
 		ge.append(g)
 	move_ball()
 	while not gameExit and len(player) != 0:
+		clock.tick(60)
 		#keys = pygame.key.get_pressed()
 		gameDisplay.fill((0,0,0))
 		for p in player:
@@ -169,7 +170,9 @@ def run(config_path):
 
 	
 	config = neat.config.Config(neat.DefaultGenome,neat.DefaultReproduction,neat.DefaultSpeciesSet,neat.DefaultStagnation,config_path)
-	'''
+
+	# Training
+
 	p = neat.Population(config)
 	
 	p.add_reporter(neat.StdOutReporter(True))
@@ -182,20 +185,22 @@ def run(config_path):
 	winner_net = neat.nn.FeedForwardNetwork.create(winner, config)
 
 	'''
+
+	# Testing
 	
 	stats = neat.StatisticsReporter()
 	p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-14')
-	#p.add_reporter(neat.Checkpointer(5))
+	p.add_reporter(neat.Checkpointer(5))
 	winner = p.run(main, 1)
 	winner_net = neat.nn.FeedForwardNetwork.create(winner, config)
-	'''
+
 	dbfile = open('AI', 'ab') 
       
 
 	pickle.dump(winner_net, dbfile)                      
 
 	dbfile.close()
-	'''
+
 	#play_winner(winner_net)
 
 	#p.run(main,winner)
@@ -203,7 +208,6 @@ def run(config_path):
 	dbfile = open('AI', 'rb')   
 
 	winner_net = pickle.load(dbfile)
-	"""
 
 	while True:
 		play_winner(winner_net)

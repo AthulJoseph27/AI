@@ -81,6 +81,7 @@ def main():
 	
 
 	while not gameExit:
+		clock.tick(60)
 		keys = pygame.key.get_pressed()
 		gameDisplay.fill((0,0,0))
 		player.player_disp()
