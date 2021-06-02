@@ -13,5 +13,5 @@
 - Run `python3 pong.py` to play the Pong.
 
 <p align="center">
-<image src="assets/PG.gif"/>
+<image src="assets/PG.gif" height="500"/>
 </p>
