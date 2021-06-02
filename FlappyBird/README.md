@@ -9,5 +9,5 @@
 - Run `python3 FlappyBird.py`. (By default, it resumes training from checkpoint).
 
 <p align="center">
-<image src="assets/FB.gif"/>
+<image src="assets/FB.gif" height="500"/>
 </p>
