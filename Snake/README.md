@@ -13,5 +13,5 @@
 - Run `python3 Snake.py` to play the Snake game.
 
 <p align="center">
-<image src="assets/SR.gif"/>
+<image src="assets/SR.gif" height="500"/>
 </p>
