@@ -305,9 +305,9 @@ def main():
 
 	while not gameExit and dead == False:
 
-		clock.tick(7)
+		clock.tick(10)
 		
-		print(len(s_pos))
+		# print(len(s_pos))
 
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
@@ -354,7 +354,7 @@ def main():
 					pygame.draw.rect(gameDisplay,(255,223,0),[605-y,605-x,20,20])
 
 		
-		print(a)
+		# print(a)
 			
 		for event in pygame.event.get():
 			if event.type == pygame.KEYDOWN:
